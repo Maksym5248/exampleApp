@@ -1,12 +1,12 @@
-import React, { memo } from 'react';
-import { View, Text } from 'react-native';
+import React from 'react';
+import { View } from 'react-native';
 
 function Job() {
-  return (
-    <View>
-      <Text>Job</Text>
-    </View>
-  );
+  return <View />;
 }
 
-export default memo(Job);
+Job.navigationOptions = () => ({
+  title: 'Job',
+});
+
+export default Job;

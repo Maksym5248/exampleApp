@@ -1,12 +1,12 @@
-import React, { memo } from 'react';
-import { View, Text } from 'react-native';
+import React from 'react';
+import { View } from 'react-native';
 
-function Home() {
-  return (
-    <View>
-      <Text>Home</Text>
-    </View>
-  );
+function Chat() {
+  return <View />;
 }
 
-export default memo(Home);
+Chat.navigationOptions = () => ({
+  title: 'Chat',
+});
+
+export default Chat;
