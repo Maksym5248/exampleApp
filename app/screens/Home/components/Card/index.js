@@ -7,11 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import styles, { colors } from '@styles';
 import { Icon, Image, Text } from '@components';
 
-import s, {
-  AVATAR_SIZE,
-  VIDEO_PLACEHOLDER_SIZE,
-  VIDEO_GRADIENT_SIZE,
-} from './styles';
+import s, { AVATAR_SIZE, VIDEO_PLACEHOLDER_SIZE } from './styles';
 
 const icons = {
   dots: {
