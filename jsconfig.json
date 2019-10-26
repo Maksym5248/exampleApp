@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "./",
+        "paths": {
+            "@constants": ["./app/constants"],
+            "@components": ["./app/components"],
+            "@navigation": ["./app/navigation"],
+            "@screens": ["./app/screens"],
+            "@services": ["./app/services"],
+            "@styles": ["./app/styles"]
+        },
+        "rootDir": "./"
+    },
+    "include": [
+        "app/*"
+    ],
+    "exclude": [
+        "console",
+        "node_modules",
+        "bin",
+    ]
+}
