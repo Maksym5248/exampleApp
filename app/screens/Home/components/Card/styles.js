@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     padding: indent * 4,
   },
-  image: {
+  avatar: {
     overflow: 'hidden',
     height: AVATAR_SIZE,
     width: AVATAR_SIZE,
