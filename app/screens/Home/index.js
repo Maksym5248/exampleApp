@@ -1,5 +1,22 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { View, Text } from 'react-native';
+import styles from '@styles';
+import { Icon } from '@components';
+
+const icons = {
+  menu: {
+    type: 'Entypo',
+    name: 'menu',
+    size: 30,
+    style: styles.marginLeftL,
+  },
+  fire: {
+    type: 'FontAwesome5',
+    name: 'fire',
+    size: 23,
+    style: styles.marginRightL,
+  },
+};
 
 function Home() {
   return (
@@ -13,4 +30,12 @@ function Home() {
   );
 }
 
-export default memo(Home);
+Home.navigationOptions = () => ({
+  title: 'Rodman',
+  headerTitleAlign: 'center',
+  headerLeft: <Icon {...icons.menu} />,
+  headerRight: <Icon {...icons.fire} />,
+  headerStyle: styles.header,
+});
+
+export default Home;

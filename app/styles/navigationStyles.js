@@ -2,6 +2,19 @@ import { Platform } from 'react-native';
 
 import { indent } from './dimensions';
 import colors from './colors';
+import textStyles from './textStyles';
+
+const headerBorderNone = {
+  backgroundColor: colors.white,
+  ...Platform.select({
+    ios: {
+      borderBottomWidth: 0,
+    },
+    android: {
+      elevation: 0,
+    },
+  }),
+};
 
 const shadow = Platform.select({
   ios: {
@@ -27,4 +40,8 @@ export default {
     height: indent * 15,
     ...shadow,
   },
+  header: {
+    ...headerBorderNone,
+  },
+  headerTitle: textStyles.main,
 };

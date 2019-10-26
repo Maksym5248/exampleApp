@@ -1,7 +1,8 @@
 import { StyleSheet } from 'react-native';
 
 import navigationStyles from './navigationStyles';
-import textStyle from './textStyle';
+import textStyles from './textStyles';
+import { indent } from './dimensions';
 
 export default StyleSheet.create({
   fillAll: {
@@ -20,6 +21,16 @@ export default StyleSheet.create({
   row: {
     flexDirection: 'row',
   },
+  center: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  marginRightL: {
+    marginRight: indent * 4,
+  },
+  marginLeftL: {
+    marginLeft: indent * 4,
+  },
   ...navigationStyles,
-  ...textStyle,
+  ...textStyles,
 });

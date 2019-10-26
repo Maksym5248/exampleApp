@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import T from 'prop-types';
 import { View } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import Icon from '../Icon';
 
 import { colors } from '@styles';
 
@@ -10,7 +10,8 @@ import s from './styles';
 function TabBarIcon({ name, color, size = 23, focused, ...props }) {
   return (
     <View style={s.container}>
-      <MaterialCommunityIcons
+      <Icon
+        type="MaterialCommunityIcons"
         name={name}
         size={size}
         color={color}

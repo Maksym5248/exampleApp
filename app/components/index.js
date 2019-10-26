@@ -1,4 +1,6 @@
+import Icon from './Icon';
 import Spinner from './Spinner';
 import TabBarIcon from './TabBarIcon';
+import Text from './Text';
 
-export { Spinner, TabBarIcon };
+export { Icon, Spinner, TabBarIcon, Text };

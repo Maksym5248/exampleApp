@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { View, Text } from 'react-native';
 
 function Chat() {
@@ -9,4 +9,8 @@ function Chat() {
   );
 }
 
-export default memo(Chat);
+Chat.navigationOptions = () => ({
+  title: 'Chat',
+});
+
+export default Chat;

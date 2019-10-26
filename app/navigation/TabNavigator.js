@@ -1,26 +1,29 @@
 import React from 'react';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { screens } from '@constants';
-import { ChatScreen, HomeScreen, JobScreen } from '@screens';
+import {
+  ChatNavigator,
+  HomeNavigator,
+  JobNavigator,
+} from './navigators';
 import styles, { colors } from '@styles';
 import { TabBarIcon } from '@components';
 
 const icons = {
-  [screens.Chat]: 'chat',
-  [screens.Home]: 'home-variant',
-  [screens.Job]: 'briefcase',
+  [screens.ChatNavigator]: 'chat',
+  [screens.HomeNavigator]: 'home-variant',
+  [screens.JobNavigator]: 'briefcase',
 };
 
 const TabNavigator = createBottomTabNavigator(
   {
-    [screens.Chat]: ChatScreen,
-    [screens.Home]: HomeScreen,
-    [screens.Job]: JobScreen,
+    [screens.ChatNavigator]: ChatNavigator,
+    [screens.HomeNavigator]: HomeNavigator,
+    [screens.JobNavigator]: JobNavigator,
   },
   {
-    initialRouteName: screens.Home,
+    initialRouteName: screens.HomeNavigator,
     tabBarOptions: {
       activeTintColor: colors.primary,
       inactiveTintColor: colors.inert,
