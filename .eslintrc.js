@@ -44,6 +44,7 @@ module.exports = {
     "react-native/split-platform-components": 2,
     "react-native/no-inline-styles": 2,
     "react-native/no-color-literals": 2,
+    "react/jsx-props-no-spreading": 0,
     "class-methods-use-this": "off",
     "arrow-parens": "off",
     "no-param-reassign": 0,
