@@ -1,14 +1,18 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import styles from '@styles';
-import { Icon } from '@components';
+import { Icon, FlatList } from '@components';
+
+import { Card } from './components';
+
+import mockData from './mockData';
 
 const icons = {
   menu: {
     type: 'Entypo',
     name: 'menu',
     size: 30,
-    style: styles.marginLeftL,
+    style: styles.marginLeftM,
   },
   fire: {
     type: 'FontAwesome5',
@@ -18,14 +22,20 @@ const icons = {
   },
 };
 
+const renderItem = ({ item }) => <Card {...item} />; // eslint-disable-line react/prop-types
+
 function Home() {
   return (
-    <View>
-      <Text>
-        {
-          'Home s\n s\n s\ns\ns\ns\ns\ns\ns\ns\ns\ns\ns\ns\ns\ns\ns\ns\nss\ns\ns\ns\ns\ns\ns\ns\ns\ns\ns\ns\ns\ns\ns\ns\ns\ns\ns\nns\ns\ns\ns\ns\ns\ns\ns\n'
-        }
-      </Text>
+    <View style={styles.fillAll}>
+      <FlatList
+        data={mockData}
+        renderItem={renderItem}
+        isLoadingRefresh={false}
+        contentContainerStyle={[
+          styles.paddingHorizontalL,
+          styles.paddingTopL,
+        ]}
+      />
     </View>
   );
 }

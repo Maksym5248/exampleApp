@@ -45,6 +45,7 @@ Icon.propTypes = {
     'MaterialCommunityIcons',
     'SimpleLineIcons',
     'FontAwesome5',
+    'Foundation',
   ]),
 };
 

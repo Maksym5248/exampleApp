@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '@styles';
+import { colors, dimensions } from '@styles';
 
 const styles = StyleSheet.create({
   container: {
-    height: 150,
+    height: dimensions.indent * 4,
     backgroundColor: colors.gray,
   },
   img: {

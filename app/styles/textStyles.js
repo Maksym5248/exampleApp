@@ -9,8 +9,8 @@ export default {
   },
   title: {
     color: colors.black,
-    fontFamily: 'montserratMedium',
-    fontSize: fontSizes.big,
+    fontFamily: 'montserratBold',
+    fontSize: fontSizes.small,
   },
   subTitle: {
     color: colors.black,
@@ -19,7 +19,7 @@ export default {
   },
   regular: {
     color: colors.black,
-    fontFamily: 'montserratBold',
-    fontSize: fontSizes.big,
+    fontFamily: 'montserratRegular',
+    fontSize: fontSizes.medium,
   },
 };

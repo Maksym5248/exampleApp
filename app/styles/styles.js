@@ -1,8 +1,24 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 import navigationStyles from './navigationStyles';
 import textStyles from './textStyles';
 import { indent } from './dimensions';
+import colors from './colors';
+
+const shadowCard = Platform.select({
+  ios: {
+    shadowColor: colors.inert,
+    shadowOpacity: 1,
+    shadowRadius: 10,
+    shadowOffset: {
+      height: 7,
+      width: 0,
+    },
+  },
+  android: {
+    elevation: 5,
+  },
+});
 
 export default StyleSheet.create({
   fillAll: {
@@ -28,9 +44,22 @@ export default StyleSheet.create({
   marginRightL: {
     marginRight: indent * 4,
   },
-  marginLeftL: {
-    marginLeft: indent * 4,
+  marginRightS: {
+    marginRight: indent * 2,
   },
+  marginLeftM: {
+    marginLeft: indent * 3,
+  },
+  paddingTopL: {
+    padding: indent * 4,
+  },
+  paddingL: {
+    padding: indent * 4,
+  },
+  paddingHorizontalL: {
+    paddingHorizontal: indent * 4,
+  },
+  shadowCard,
   ...navigationStyles,
   ...textStyles,
 });
