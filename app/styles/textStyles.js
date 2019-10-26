@@ -9,17 +9,22 @@ export default {
   },
   title: {
     color: colors.black,
-    fontFamily: 'montserratBold',
+    fontFamily: 'montserratMedium',
     fontSize: fontSizes.small,
   },
   subTitle: {
     color: colors.black,
     fontFamily: 'montserratMedium',
-    fontSize: fontSizes.big,
+    fontSize: fontSizes.smallest,
   },
-  regular: {
+  regularM: {
     color: colors.black,
     fontFamily: 'montserratRegular',
     fontSize: fontSizes.medium,
+  },
+  regularS: {
+    color: colors.black,
+    fontFamily: 'montserratRegular',
+    fontSize: fontSizes.small,
   },
 };

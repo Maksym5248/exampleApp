@@ -1,12 +1,8 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 
 function Chat() {
-  return (
-    <View>
-      <Text>Chat</Text>
-    </View>
-  );
+  return <View />;
 }
 
 Chat.navigationOptions = () => ({

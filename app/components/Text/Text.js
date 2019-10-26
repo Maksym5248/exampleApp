@@ -5,7 +5,7 @@ import T from 'prop-types';
 import { textStyles as s } from '@styles';
 
 function Text({
-  type = 'regular',
+  type = 'regularM',
   color,
   uppercase,
   style,
@@ -15,6 +15,7 @@ function Text({
 }) {
   return (
     <Txt
+      allowFontScaling={false}
       {...props}
       style={[
         type && s[type],
@@ -32,7 +33,13 @@ Text.propTypes = {
   style: Txt.propTypes.style,
   uppercase: T.bool,
   color: T.string,
-  type: T.oneOf(['main', 'title', 'subTitle', 'regular']),
+  type: T.oneOf([
+    'main',
+    'title',
+    'subTitle',
+    'regularS',
+    'regularM',
+  ]),
   text: T.oneOfType([T.string, T.number]),
   children: T.node,
 };

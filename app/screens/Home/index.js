@@ -6,6 +6,7 @@ import { Icon, FlatList } from '@components';
 import { Card } from './components';
 
 import mockData from './mockData';
+import s from './styles';
 
 const icons = {
   menu: {
@@ -31,10 +32,7 @@ function Home() {
         data={mockData}
         renderItem={renderItem}
         isLoadingRefresh={false}
-        contentContainerStyle={[
-          styles.paddingHorizontalL,
-          styles.paddingTopL,
-        ]}
+        contentContainerStyle={s.contentContainerStyle}
       />
     </View>
   );

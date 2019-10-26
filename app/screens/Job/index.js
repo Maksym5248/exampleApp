@@ -1,12 +1,8 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 
 function Job() {
-  return (
-    <View>
-      <Text>Job</Text>
-    </View>
-  );
+  return <View />;
 }
 
 Job.navigationOptions = () => ({

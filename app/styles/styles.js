@@ -8,15 +8,15 @@ import colors from './colors';
 const shadowCard = Platform.select({
   ios: {
     shadowColor: colors.inert,
-    shadowOpacity: 1,
-    shadowRadius: 10,
+    shadowOpacity: 0.5,
+    shadowRadius: 8,
     shadowOffset: {
-      height: 7,
+      height: 4,
       width: 0,
     },
   },
   android: {
-    elevation: 5,
+    elevation: 2,
   },
 });
 
