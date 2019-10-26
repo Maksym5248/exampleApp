@@ -2,9 +2,10 @@ import React, { memo } from 'react';
 import { View } from 'react-native';
 import T from 'prop-types';
 import R from 'ramda';
+import { LinearGradient } from 'expo-linear-gradient';
 
 import styles, { colors } from '@styles';
-import { Icon, Image, Text, GradientLinear } from '@components';
+import { Icon, Image, Text } from '@components';
 
 import s, {
   AVATAR_SIZE,
@@ -93,18 +94,17 @@ function Card({
             />
             <View style={s.containerButtonGradient}>
               <View style={s.containerButtonGradientBackground} />
-              <GradientLinear
-                containerStyle={s.containerGradient}
-                style={s.contentGradient}
-                width={VIDEO_GRADIENT_SIZE}
-                height={VIDEO_GRADIENT_SIZE}
-                y1={0}
-                y2={VIDEO_GRADIENT_SIZE}
-                firstColor={colors.primaryGradientFirst}
-                secondColor={colors.primaryGradientSecond}
+              <LinearGradient
+                colors={[
+                  colors.primaryGradientFirst,
+                  colors.primaryGradientSecond,
+                ]}
+                style={s.containerGradient}
               >
-                <Icon {...icons.play} />
-              </GradientLinear>
+                <View style={s.contentGradient}>
+                  <Icon {...icons.play} />
+                </View>
+              </LinearGradient>
             </View>
           </View>
         )}
