@@ -8,7 +8,7 @@ export const AVATAR_SIZE = dimensions.indent * 8;
 export const VIDEO_PLACEHOLDER_SIZE = dimensions.indent * 15;
 
 const VIDEO_HEIGHT = dimensions.indent * 38;
-export const VIDEO_GRADIENT_SIZE = dimensions.indent * 13;
+const VIDEO_GRADIENT_SIZE = dimensions.indent * 13;
 const VIDEO_BUTTON_SIZE = VIDEO_GRADIENT_SIZE + dimensions.indent * 7;
 
 const styles = StyleSheet.create({
